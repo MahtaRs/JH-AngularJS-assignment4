@@ -1,21 +1,37 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Shopping List Check Off</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
-  </head>
-<body ng-app="MenuApp">
-  <div class="container">
-    <div class="col-md-6">
-      <categories cats="catCon.categories"></categories>
-    </div>
-  </div>
-  <script src="angular.js"></script>
-  <script src="menuapp.module.js"></script>
-  <script src="data.module.js"></script>
-  <script src="categories.controller.js"></script>
-  <script src="menudata.service.js"></script>
-  <script src="categories.component.js"></script>
-</body>
+<html>
+    <head>
+      <style media="screen">
+        .cat-button {
+          width:100%;
+          height:1.2cm;
+          background-color:skyblue;
+          color:white;
+          border-radius: 20px;
+          margin-top:2px;
+        }
+      </style>
+    </head>
+    <body ng-app="MenuApp">
+        <header>
+            <center>
+                <a href="#" ui-sref="home">Home</a>
+                <a href="#" ui-sref="categories">Categories</a>
+            </center>
+        </header>
+        <main>
+            <ui-view></ui-view>
+        </main>
+        <footer>
+        </footer>
+        <script src="lib/angular.js"></script>
+        <script src="lib/angular-ui-router.min.js"></script>
+        <script src="menuapp.module.js"></script>
+        <script src="data.module.js"></script>
+        <script src="menudata.service.js"></script>
+        <script src="categories.controller.js"></script>
+        <script src="routes.js"></script>
+        <script src="categories.component.js"></script>
+        <script src="items.controller.js"></script>
+        <script src="items.component.js"></script>
+    </body>
 </html>

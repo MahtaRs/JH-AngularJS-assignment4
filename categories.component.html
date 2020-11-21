@@ -1,7 +1,3 @@
-<div class="container">
-  <div class="border rounded shadow col-md-3" ng-repeat="cat in cats">
-    {{cat.id}}.<h3>{{cat.short_name}}</h3>
-    <hr>
-    {{cat.name}}
-  </div>
+<div ng-repeat="cat in $ctrl.categoryOps track by $index">
+    <button ui-sref="items({categoryShortName:cat.short_name})" class="cat-button" name="">{{cat.id}} - {{cat.short_name}} : {{cat.name}}</button>
 </div>

@@ -1,0 +1,22 @@
+<div>
+  <table>
+    <thead>
+      <th>ID</th>
+      <th>Short Name</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price L</th>
+      <th>Price S</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in $ctrl.items track by $index">
+        <td>{{item.id}}</td>
+        <td>{{item.short_name}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.price_large}}</td>
+        <td>{{item.price_small}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
